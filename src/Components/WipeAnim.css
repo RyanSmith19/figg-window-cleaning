@@ -13,7 +13,7 @@
     width: 100%;
     height: 33.33%;
     background: rgba(255, 255, 255, 1.0) repeat; /* Assuming you have a suds pattern image */
-    opacity: 0.8; /* Adjust opacity to make the website barely visible */
+    opacity: 0.9; /* Adjust opacity to make the website barely visible */
 }
 
 .suds-layer1 {

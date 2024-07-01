@@ -3,6 +3,8 @@ import './App.css';
 import WipeAnim from './Components/WipeAnim';
 
 function App() {
+    const phoneNumber = '(805) 539-5649';
+
     return (
         <div className="App">
          
@@ -17,17 +19,30 @@ function App() {
                     </ul>
                 </nav> */}
             </header>
-            <section id="services" className="section">
-                <h2>Our Services</h2>
-                <p>We provide professional window cleaning services for residential and commercial properties.</p>
-            </section>
             <section id="about" className="section">
                 <h2>About Us</h2>
-                <p>Learn more about our company and our commitment to providing excellent service.</p>
+                <p>Providing Professional Window Cleaning Services to the Central Coast Since 2017</p>
+            </section>
+            <section id="services" className="section">
+                <h2>Our Services</h2>
+                <ul className="services-list">
+                    <li>Exterior/Interior Windows</li>
+                    <li>Window Tracks</li>
+                    <li>Screens</li>
+                    <li>Multi-story</li>
+                    <li>Gutters</li>
+                    <li>Blinds</li>
+                    <li>Solar Panels</li>
+                </ul>
             </section>
             <section id="contact" className="section">
                 <h2>Contact Us</h2>
                 <p>Get in touch with us to schedule your window cleaning appointment.</p>
+                <p>Call or Text Today!</p>
+                <div className="phone-number">
+                    <i className="fas fa-phone"></i>
+                    {phoneNumber}
+                </div>
             </section>
             {/* <footer className="footer">
                 <p>&copy; 2024 Figg Window Cleaning. All rights reserved.</p>

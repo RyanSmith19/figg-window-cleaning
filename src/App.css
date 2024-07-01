@@ -1,27 +1,44 @@
 /* App.css */
 
+:root {
+  --primary-color: rgba(74, 144, 226, 1.0);
+  --primary-color-light: rgba(74, 144, 226, 0.8);
+  --secondary-color: rgba(240, 248, 255, 1.0);
+  --text-color: rgba(51, 51, 51, 1.0);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(248, 249, 250, 1.0);
+  color: var(--text-color);
+}
+
 .App {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
-  background-color: rgba(0, 123, 255, 1.0);
+  background-color: var(--primary-color);
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .header nav ul li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -29,6 +46,11 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+  color: var(--primary-color-light);
 }
 
 .logo-container {
@@ -39,7 +61,6 @@
 
 .logo {
   height: 50px;
-  margin-right: 20px;
   max-width: 100%;
   height: auto; /* Ensure the height auto-adjusts to maintain aspect ratio */
 }
@@ -47,23 +68,54 @@
 .section {
   padding: 50px;
   text-align: center;
-  flex: 1;
+  background-color: white;
+  margin: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section:nth-child(odd) {
-  background-color: rgba(0, 255, 230, 1.0);
+  background-color: var(--secondary-color);
 }
 
-.section:nth-child(even) {
-  background-color: rgba(0, 200, 255, 1.0);
+.section h2 {
+  color: var(--primary-color);
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.services-list li {
+  margin: 10px 0;
+}
+
+.phone-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.phone-number i {
+  margin-right: 10px;
+  font-size: 24px;
 }
 
 .footer {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
-  width: 100%;
   margin-top: auto; /* Ensures the footer stays at the bottom of the content */
 }
