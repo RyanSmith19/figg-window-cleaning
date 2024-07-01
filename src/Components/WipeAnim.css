@@ -1,0 +1,53 @@
+.wipe-animation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensure that the layers do not block interaction with the underlying content */
+    z-index: 9999; /* Make sure the animation layers are on top of the content */
+}
+
+.suds-layer {
+    position: absolute;
+    width: 100%;
+    height: 33.33%;
+    background: rgba(255, 255, 255, 1.0) repeat; /* Assuming you have a suds pattern image */
+    opacity: 0.8; /* Adjust opacity to make the website barely visible */
+}
+
+.suds-layer1 {
+    top: 0;
+    z-index: 3;
+    animation: wipeRightToLeft 2s forwards;
+}
+
+.suds-layer2 {
+    top: 33.33%;
+    z-index: 2;
+    animation: wipeLeftToRight 2s 2s forwards; /* Delay to start after the first animation */
+}
+
+.suds-layer3 {
+    top: 66.66%;
+    z-index: 1;
+    animation: wipeRightToLeft 2s 4s forwards; /* Delay to start after the second animation */
+}
+
+@keyframes wipeRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes wipeLeftToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

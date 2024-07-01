@@ -1,38 +1,69 @@
+/* App.css */
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.header {
+  background-color: rgba(0, 123, 255, 1.0);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+  max-width: 100%;
+  height: auto; /* Ensure the height auto-adjusts to maintain aspect ratio */
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+  flex: 1;
+}
+
+.section:nth-child(odd) {
+  background-color: rgba(0, 255, 230, 1.0);
+}
+
+.section:nth-child(even) {
+  background-color: rgba(0, 200, 255, 1.0);
+}
+
+.footer {
+  background-color: #333;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  margin-top: auto; /* Ensures the footer stays at the bottom of the content */
 }
