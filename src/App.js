@@ -4,6 +4,10 @@ import WipeAnim from './Components/WipeAnim';
 
 function App() {
     const phoneNumber = '(805) 539-5649';
+    const phoneLink = `tel:${phoneNumber.replace(/[^0-9]/g, '')}`;
+    const emailAddress = 'figgwindowcleaning@gmail.com';
+    const emailLink = `mailto:${emailAddress}`;
+    const facebookLink = 'https://www.facebook.com/profile.php?id=61560963135918&sk=about';
 
     return (
         <div className="App">
@@ -19,13 +23,13 @@ function App() {
                 </nav> */}
             </header>
             <section id="about" className="section">
-                <h2>About Us</h2>
+                <h2>About</h2>
                 <p>Providing Professional Window Cleaning Services to the Central Coast Since 2017.</p>
                 <p>At Figg Window Cleaning, we pride ourselves on delivering top-notch window cleaning services with unparalleled attention to detail. Our team of skilled professionals is dedicated to making your windows sparkle and shine, enhancing the beauty and clarity of your views.</p>
                 {/* <p>We understand the importance of clean windows for both residential and commercial properties. Clean windows not only improve the appearance of your property but also allow more natural light to enter, creating a brighter and more inviting environment.</p> */}
             </section>
             <section id="services" className="section">
-                <h2>Our Services</h2>
+                <h2>Services</h2>
                 <ul className="services-list">
                     <li>Exterior/Interior Windows</li>
                     <li>Window Tracks</li>
@@ -41,9 +45,25 @@ function App() {
                 <h2>Contact Us</h2>
                 <p>Get in touch with us to schedule your window cleaning appointment. We offer flexible scheduling options to accommodate your busy lifestyle.</p>
                 <p>Call or Text Today!</p>
-                <div className="phone-number">
-                    <i className="fas fa-phone"></i>
-                    {phoneNumber}
+                <div className="contact-details">
+                    <div className="phone-number">
+                        <a href={phoneLink}>
+                            <i className="fas fa-phone"></i>
+                            {phoneNumber}
+                        </a>
+                    </div>
+                    <div className="email-address">
+                        <a href={emailLink}>
+                            <i className="fas fa-envelope"></i>
+                            {emailAddress}
+                        </a>
+                    </div>
+                    <div className="social-media">
+                        <a href={facebookLink} target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-facebook-f"></i>
+                        </a>
+                        {/* Add more social media links here if needed */}
+                    </div>
                 </div>
             </section>
             {/* <footer className="footer">
